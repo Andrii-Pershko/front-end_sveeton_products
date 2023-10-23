@@ -14,6 +14,20 @@ const Products = () => {
     dispatch(getProductList());
   }, [dispatch]);
 
-  return <h1>ProductsPage</h1>;
+  return (
+    <>
+      <h1>ProductsPage</h1>
+      <ul>
+        {productList.map(product => (
+          <li key={product._id}>
+            <h2>{product.title}</h2>
+            <p>{product.price}</p>
+            <p>{product.characreristick}</p>
+            <p>{product.img}</p>
+          </li>
+        ))}
+      </ul>
+    </>
+  );
 };
 export default Products;

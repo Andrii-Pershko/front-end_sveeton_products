@@ -3,11 +3,13 @@ import axios from 'axios';
 
 axios.defaults.baseURL = 'https://sveeton-products.onrender.com';
 
-export const getProductList = createAsyncThunk(
-  'productList',
-  async (_, thunkAPI) => {
+export const autorizationAdmin = createAsyncThunk(
+  'autorizationAdmin',
+  async (formData, thunkAPI) => {
+    console.log('formData', formData);
     try {
-      const response = await axios.get(`/products`);
+      const response = await axios.post(`/super_admin`, formData);
+
       return response.data;
     } catch (e) {
       return thunkAPI.rejectWithValue(e.message);
