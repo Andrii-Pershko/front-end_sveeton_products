@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/front-end_sveeton_products/static/css/main.7acaea2f.css",
+    "main.js": "/front-end_sveeton_products/static/js/main.9e84cdb5.js",
+    "index.html": "/front-end_sveeton_products/index.html",
+    "main.7acaea2f.css.map": "/front-end_sveeton_products/static/css/main.7acaea2f.css.map",
+    "main.9e84cdb5.js.map": "/front-end_sveeton_products/static/js/main.9e84cdb5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.9e84cdb5.js"
+  ]
+}
