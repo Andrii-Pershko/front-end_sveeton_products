@@ -13,4 +13,4 @@ const productsSlice = createSlice({
       .addCase(getProductList.rejected, handleRejected),
 });
 
-export const productsReduser = productsSlice.reducer;
+export const productsReducer = productsSlice.reducer;

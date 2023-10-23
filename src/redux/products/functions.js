@@ -3,7 +3,7 @@ export const handlePending = state => {
 };
 export const handleFulfilled = (state, action) => {
   state.isLoading = false;
-  state.products = action.payload;
+  state.productsList = action.payload;
 };
 
 export const handleRejected = (state, action) => {

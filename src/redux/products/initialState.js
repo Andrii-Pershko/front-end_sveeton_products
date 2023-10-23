@@ -1,6 +1,6 @@
 const initialStateProducts = {
   isLoading: false,
-  products: [],
+  productsList: [],
   error: false,
 };
 
