@@ -8,6 +8,7 @@ const LoginAdmin = () => {
   const initialValues = { login: '', password: '' };
 
   const handleSubmit = e => {
+    localStorage.setItem('admin', JSON.stringify(e));
     dispatch(autorizationAdmin(e));
   };
 
