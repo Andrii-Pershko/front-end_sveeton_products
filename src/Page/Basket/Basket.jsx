@@ -1,6 +1,6 @@
 import BasketList from 'components/Basket/BasketList';
 import { useDispatch } from 'react-redux';
-import { handleNewOrder, newOrder } from 'redux/Order/operations';
+import { newOrder } from 'redux/Order/operations';
 
 const Basket = () => {
   const dispatch = useDispatch();

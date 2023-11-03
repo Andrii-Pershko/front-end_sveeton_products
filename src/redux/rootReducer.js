@@ -13,11 +13,11 @@ import storage from 'redux-persist/lib/storage';
 import { adminReducer } from './Admin/adminSlice';
 import basketReducer from './basket/basketSlice';
 
-const persistConfigFavorite = {
-  key: 'favorite',
-  storage,
-  whitelist: ['favorite'],
-};
+// const persistConfigFavorite = {
+//   key: 'favorite',
+//   storage,
+//   whitelist: ['favorite'],
+// };
 
 const persistConfigBasket = {
   key: 'basket',

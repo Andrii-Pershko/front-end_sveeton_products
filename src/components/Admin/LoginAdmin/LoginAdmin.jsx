@@ -1,5 +1,5 @@
 import { Field, Form, Formik } from 'formik';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { autorizationAdmin } from 'redux/Admin/operations';
 
 const LoginAdmin = () => {

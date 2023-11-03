@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { InfThumb, Item } from './ProductItem.styled';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectProductList } from 'redux/products/selectors';
 import {
   addProductinBasket,
   deleteProductfromBasket,
