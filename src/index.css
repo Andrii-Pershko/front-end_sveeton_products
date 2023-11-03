@@ -1,17 +1,114 @@
 @import-normalize;
 /* bring in normalize.css styles */
 
+
+
+@font-face {
+  font-family: "Mak-Light";
+  src: url("https://db.onlinewebfonts.com/t/533a9d5954c9f7a7b9bb119208251fe4.eot");
+  src: url("https://db.onlinewebfonts.com/t/533a9d5954c9f7a7b9bb119208251fe4.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/533a9d5954c9f7a7b9bb119208251fe4.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/533a9d5954c9f7a7b9bb119208251fe4.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/533a9d5954c9f7a7b9bb119208251fe4.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/533a9d5954c9f7a7b9bb119208251fe4.svg#Mak-Light")format("svg");
+}
+
+@font-face {
+  font-family: "Source Code Variable";
+  src: url("https://db.onlinewebfonts.com/t/02a670d8eb6755beb38a5d2353d2b81f.eot");
+  src: url("https://db.onlinewebfonts.com/t/02a670d8eb6755beb38a5d2353d2b81f.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/02a670d8eb6755beb38a5d2353d2b81f.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/02a670d8eb6755beb38a5d2353d2b81f.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/02a670d8eb6755beb38a5d2353d2b81f.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/02a670d8eb6755beb38a5d2353d2b81f.svg#Source Code Variable")format("svg");
+}
+
+:root {
+  --primal-color: #4e5e15;
+  --akcent-color: #535454;
+  --background-color: #f6e8d7b1;
+  --hover-color: #
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-size: 22px;
+  letter-spacing: 1px;
+  font-family: "Source Code Variable";
+  font-weight: 200;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Mak-Light";
+  letter-spacing: 3px;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  position: relative;
 }
 
+a {
+  text-decoration: none;
+  outline: none;
+  font-family: "Mak-Light";
+  letter-spacing: 3px;
+}
+
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  display: block;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+  color: white;
+  background-color: #4e5e15;
+  padding: 15px;
+  border-radius: 40px;
+  border: none;
+  font-size: 22px;
+}
+
+button:hover {
+  background-color: #829f19;
+  -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+button:active {
+  background-color: var(--primal-color);
+  -webkit-box-shadow: 4px 4px 8px 6px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 4px 4px 8px 6px rgba(34, 60, 80, 0.2);
+  box-shadow: 4px 4px 8px 6px rgba(34, 60, 80, 0.2);
+}

@@ -11,6 +11,7 @@ import {
 import { productsReducer } from './products/productsSlice';
 import storage from 'redux-persist/lib/storage';
 import { adminReducer } from './Admin/adminSlice';
+import basketReducer from './basket/basketSlice';
 
 const persistConfigFavorite = {
   key: 'favorite',
@@ -33,7 +34,7 @@ export const middleware = getDefaultMiddleware =>
 
 export const reducer = combineReducers({
   //   favorite: persistReducer(persistConfigFavorite),
-  //   basket: persistReducer(persistConfigBasket),
+  basket: persistReducer(persistConfigBasket, basketReducer),
   products: productsReducer,
   admin: adminReducer,
 });

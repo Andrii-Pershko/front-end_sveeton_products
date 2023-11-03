@@ -1,14 +1,12 @@
 import { Field, Form, Formik } from 'formik';
 import { useDispatch, useSelector } from 'react-redux';
 import { autorizationAdmin } from 'redux/Admin/operations';
-import { selectIsAdmin } from 'redux/Admin/selectors';
 
 const LoginAdmin = () => {
   const dispatch = useDispatch();
   const initialValues = { login: '', password: '' };
 
   const handleSubmit = e => {
-    localStorage.setItem('admin', JSON.stringify(e));
     dispatch(autorizationAdmin(e));
   };
 
