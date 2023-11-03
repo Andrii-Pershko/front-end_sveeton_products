@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/front-end_sveeton_products/static/css/main.7acaea2f.css",
-    "main.js": "/front-end_sveeton_products/static/js/main.9e84cdb5.js",
+    "main.css": "/front-end_sveeton_products/static/css/main.e1ca0564.css",
+    "main.js": "/front-end_sveeton_products/static/js/main.a03dfe76.js",
+    "static/media/logo.svg": "/front-end_sveeton_products/static/media/logo.d236e105f98f974caa9dc7a986208390.svg",
     "index.html": "/front-end_sveeton_products/index.html",
-    "main.7acaea2f.css.map": "/front-end_sveeton_products/static/css/main.7acaea2f.css.map",
-    "main.9e84cdb5.js.map": "/front-end_sveeton_products/static/js/main.9e84cdb5.js.map"
+    "static/media/bag_7156253.svg": "/front-end_sveeton_products/static/media/bag_7156253.0087539f09abb78d73d96c2fea6f9d43.svg",
+    "main.e1ca0564.css.map": "/front-end_sveeton_products/static/css/main.e1ca0564.css.map",
+    "main.a03dfe76.js.map": "/front-end_sveeton_products/static/js/main.a03dfe76.js.map"
   },
   "entrypoints": [
-    "static/css/main.7acaea2f.css",
-    "static/js/main.9e84cdb5.js"
+    "static/css/main.e1ca0564.css",
+    "static/js/main.a03dfe76.js"
   ]
 }
