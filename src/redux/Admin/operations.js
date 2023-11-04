@@ -1,9 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-//localhost:3001/
-//https://sveeton-products.onrender.com
-axios.defaults.baseURL = 'http://localhost:3001';
+axios.defaults.baseURL = 'https://sveeton-products.onrender.com';
 const setAuthHeader = token => {
   axios.defaults.headers.common.Authorization = `Bearer ${token}`;
 };

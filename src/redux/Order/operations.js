@@ -3,7 +3,7 @@ import axios from 'axios';
 
 //localhost:3001/
 //https://sveeton-products.onrender.com
-axios.defaults.baseURL = 'http://localhost:3001';
+axios.defaults.baseURL = 'https://sveeton-products.onrender.com';
 
 export const newOrder = createAsyncThunk(
   'order',
