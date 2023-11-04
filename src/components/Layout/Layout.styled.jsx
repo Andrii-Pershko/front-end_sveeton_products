@@ -50,8 +50,6 @@ export const Header = styled.header`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  min-width: 1280px;
-
   padding-left: 96px;
   padding-right: 96px;
   z-index: 2;
