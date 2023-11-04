@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/front-end_sveeton_products/static/css/main.e1ca0564.css",
-    "main.js": "/front-end_sveeton_products/static/js/main.a03dfe76.js",
+    "main.js": "/front-end_sveeton_products/static/js/main.9a4abd4c.js",
     "static/media/logo.svg": "/front-end_sveeton_products/static/media/logo.d236e105f98f974caa9dc7a986208390.svg",
     "index.html": "/front-end_sveeton_products/index.html",
     "static/media/bag_7156253.svg": "/front-end_sveeton_products/static/media/bag_7156253.0087539f09abb78d73d96c2fea6f9d43.svg",
     "main.e1ca0564.css.map": "/front-end_sveeton_products/static/css/main.e1ca0564.css.map",
-    "main.a03dfe76.js.map": "/front-end_sveeton_products/static/js/main.a03dfe76.js.map"
+    "main.9a4abd4c.js.map": "/front-end_sveeton_products/static/js/main.9a4abd4c.js.map"
   },
   "entrypoints": [
     "static/css/main.e1ca0564.css",
-    "static/js/main.a03dfe76.js"
+    "static/js/main.9a4abd4c.js"
   ]
 }
