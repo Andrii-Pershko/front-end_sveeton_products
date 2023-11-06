@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Modal = styled.div`
   background-color: rgba(255, 255, 255, 1);
-  max-height: 80%;
+  max-height: 90%;
   padding: 40px;
   position: absolute;
   top: 50%;

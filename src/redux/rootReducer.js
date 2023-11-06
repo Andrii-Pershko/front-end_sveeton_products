@@ -27,7 +27,7 @@ const persistConfigBasket = {
 const persistConfigToken = {
   key: 'token',
   storage,
-  whitelist: ['basketList'],
+  whitelist: ['token'],
 };
 
 export const middleware = getDefaultMiddleware =>
@@ -38,7 +38,7 @@ export const middleware = getDefaultMiddleware =>
   });
 
 export const reducer = combineReducers({
-  //   favorite: persistReducer(persistConfigFavorite),
+  token: persistReducer(persistConfigToken, adminReducer),
   basket: persistReducer(persistConfigBasket, basketReducer),
   products: productsReducer,
   admin: adminReducer,

@@ -15,7 +15,7 @@ export const Container = styled.div`
   padding-top: 100px;
   width: 100%;
   min-width: 1280px;
-  max-width: 1440px;
+  max-width: 1920px;
   padding-left: 96px;
   padding-right: 96px;
   margin: 0 auto;

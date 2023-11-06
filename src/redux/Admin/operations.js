@@ -10,7 +10,6 @@ export const addProduct = createAsyncThunk(
   'autorizationAdmin',
   async (formData, thunkAPI) => {
     try {
-      console.log('Example', formData);
       const response = await axios.post(`/super_admin/add_product`, formData);
 
       return response.data;

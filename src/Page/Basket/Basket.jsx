@@ -1,17 +1,12 @@
-import BasketList from 'components/Basket/BasketList';
-import { useDispatch } from 'react-redux';
-import { newOrder } from 'redux/Order/operations';
+import BasketList from 'components/Basket/BasketList/BasketList';
+
 
 const Basket = () => {
-  const dispatch = useDispatch();
-  const order = () => {
-    // handleNewOrder({ name: 'Aндрій', phone: '0679543102', price: '10000' });
-    dispatch(newOrder());
-  };
+
+
   return (
     <>
       <BasketList />
-      <button onClick={order}>замовити</button>
     </>
   );
 };

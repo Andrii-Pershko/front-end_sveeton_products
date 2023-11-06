@@ -20,16 +20,13 @@ const OverlayModal = ({ togleModal, children }) => {
 
   const handleClickOverlay = e => {
     if (e.currentTarget === e.target) {
-      togleModal();
+      togleModal(e);
     }
   };
 
   return createPortal(
     <Overlay onClick={handleClickOverlay}>
-      <h1>HELLO</h1>
-      <Modal>
-        {children}
-      </Modal>
+      <Modal>{children}</Modal>
     </Overlay>,
     modalRoot
   );
