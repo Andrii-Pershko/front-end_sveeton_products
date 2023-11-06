@@ -22,7 +22,12 @@ import basketReducer from './basket/basketSlice';
 const persistConfigBasket = {
   key: 'basket',
   storage,
-  whitelist: ['basket'],
+  whitelist: ['basketList'],
+};
+const persistConfigToken = {
+  key: 'token',
+  storage,
+  whitelist: ['basketList'],
 };
 
 export const middleware = getDefaultMiddleware =>
