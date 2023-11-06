@@ -7,7 +7,12 @@ import OrderModal from '../OrderModal';
 
 const BasketList = () => {
   const basketList = useSelector(selectBasketList);
-  const [orderList, setOrderList] = useState(basketList);
+  const [orderList, setOrderList] = useState(
+    basketList.map(item => {
+      return { ...item, amount: 1 };
+    })
+  );
+
   const [isOpenOrderModal, setIsOpenOrderModal] = useState(false);
   const [totalPrice, setTotalPrice] = useState(() => {
     let price = 0;
@@ -28,8 +33,6 @@ const BasketList = () => {
   const toggleModal = () => {
     setIsOpenOrderModal(!isOpenOrderModal);
   };
-
-  
 
   return (
     <>
@@ -56,7 +59,10 @@ const BasketList = () => {
       </Table>
       <button onClick={toggleModal}>Замовити</button>
       {isOpenOrderModal ? (
-        <OrderModal toglle={toggleModal} orderData={orderList} />
+        <OrderModal
+          toglle={toggleModal}
+          orderData={{ orderList, totalPrice }}
+        />
       ) : null}
     </>
   );

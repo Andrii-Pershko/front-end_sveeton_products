@@ -1,5 +1,5 @@
 import OverlayModal from 'components/OverlayModal';
-import { Field, Form, Formik } from 'formik';
+import { Field, Formik } from 'formik';
 import { useDispatch } from 'react-redux';
 import { newOrder } from 'redux/Order/operations';
 import { FormStyled } from './OrderModal.styled';
