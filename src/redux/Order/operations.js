@@ -9,11 +9,7 @@ export const newOrder = createAsyncThunk(
   'order',
   async (formData, thunkAPI) => {
     try {
-      const response = await axios.post(`/order`, {
-        name: 'Урааа',
-        phone: '0679543102',
-        price: '100 000 грн',
-      });
+      const response = await axios.post(`/order`, formData);
 
       return response.data;
     } catch (e) {
