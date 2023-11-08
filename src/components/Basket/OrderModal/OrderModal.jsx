@@ -1,8 +1,15 @@
 import OverlayModal from 'components/OverlayModal';
-import { Field, Formik } from 'formik';
+import { Formik } from 'formik';
 import { useDispatch } from 'react-redux';
 import { newOrder } from 'redux/Order/operations';
-import { FormStyled } from './OrderModal.styled';
+import {
+  FormStyled,
+  Hint,
+  Label,
+  StyledField,
+  Title,
+  TitleField,
+} from './OrderModal.styled';
 
 const OrderModal = ({ toglle, orderData }) => {
   const dispatch = useDispatch();
@@ -20,20 +27,20 @@ const OrderModal = ({ toglle, orderData }) => {
     <OverlayModal togleModal={toglle}>
       <Formik initialValues={initialValues} onSubmit={handleSubmit}>
         <FormStyled>
-          <h1>Введіть данні нового продукту</h1>
-          <label>
-            <p>Ваше імя</p>
-            <Field type="text" name="name" />
-          </label>
-          <label>
-            <p>Адреса Доставки</p>
-            <Field type="text" name="adress" />
-            <p>Якщо інший метод доставки залишете поле пустим</p>
-          </label>
-          <label>
-            <p>Номер для підтвердження замовлення</p>
-            <Field type="text" name="phone" />
-          </label>
+          <Title>Введіть данні замовлення</Title>
+          <Label>
+            <TitleField>Ваше імя</TitleField>
+            <StyledField type="text" name="name" />
+          </Label>
+          <Label>
+            <TitleField>Адреса Доставки</TitleField>
+            <StyledField type="text" name="adress" />
+            <Hint>Введіть місто, службу доставки та номер відділеня</Hint>
+          </Label>
+          <Label>
+            <TitleField>Номер для підтвердження замовлення</TitleField>
+            <StyledField type="text" name="phone" />
+          </Label>
 
           <button type="submit">Підтвердити</button>
         </FormStyled>

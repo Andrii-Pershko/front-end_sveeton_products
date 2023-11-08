@@ -5,6 +5,9 @@ import {
   Container,
   Count,
   Header,
+  HeaderContainer,
+  IcoBasket,
+  LoaderStyle,
   LogoNavLink,
   Nav,
   StyledLink,
@@ -14,6 +17,7 @@ import { selectIsAdmin } from 'redux/Admin/selectors';
 import basket from '../../img/ico/baskett/bag_7156253.svg';
 import logo from '../../img/logo.svg';
 import { selectBasketList } from 'redux/basket/selectors';
+import Loader from 'components/Loader';
 
 const Layout = () => {
   const isAdmin = useSelector(selectIsAdmin);
@@ -22,32 +26,40 @@ const Layout = () => {
   return (
     <>
       <Header>
-        <LogoNavLink to="/">
-          <img width={100} src={logo} alt="logo" />
-        </LogoNavLink>
-        <Nav>
-          <StyledLink to="/">Home</StyledLink>
-          <StyledLink to="/products">Products</StyledLink>
-          <Basket to="/basket">
-            <img width={45} src={basket} alt="basket" />
-            {products > 0 ? <Count>{products}</Count> : <></>}
-          </Basket>
+        <HeaderContainer>
+          <LogoNavLink to="/">
+            <img width={100} src={logo} alt="logo" />
+          </LogoNavLink>
+          <Nav>
+            <StyledLink to="/">Home</StyledLink>
+            <StyledLink to="/products">Products</StyledLink>
+            <Basket to="/basket">
+              <IcoBasket src={basket} />
+              {products > 0 ? <Count>{products}</Count> : <></>}
+            </Basket>
 
-          {isAdmin ? (
-            <>
-              <StyledLink to="superAdmin/catalog">Каталог</StyledLink>
-              <StyledLink to="superAdmin/orders">Замовлення</StyledLink>
-            </>
-          ) : (
-            <></>
-          )}
-        </Nav>
+            {isAdmin ? (
+              <>
+                <StyledLink to="superAdmin/catalog">Каталог</StyledLink>
+                <StyledLink to="superAdmin/orders">Замовлення</StyledLink>
+              </>
+            ) : (
+              <></>
+            )}
+          </Nav>
+        </HeaderContainer>
       </Header>
-      <Container>
-        <Suspense fallback={<h1>loading</h1>}>
+      <Suspense
+        fallback={
+          <LoaderStyle>
+            <Loader />
+          </LoaderStyle>
+        }
+      >
+        <Container>
           <Outlet />
-        </Suspense>
-      </Container>
+        </Container>
+      </Suspense>
     </>
   );
 };

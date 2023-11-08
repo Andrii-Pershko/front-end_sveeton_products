@@ -53,3 +53,9 @@ export const Tr = styled.tr`
     width: 180px;
   }
 `;
+export const OrderBtn = styled.button`
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+`;

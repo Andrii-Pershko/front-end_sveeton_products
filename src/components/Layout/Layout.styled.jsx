@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import { ReactSVG } from 'react-svg';
 import styled, { keyframes } from 'styled-components';
 
 const fadeInAnimation = keyframes`
@@ -23,14 +24,16 @@ export const Container = styled.div`
 
 export const StyledLink = styled(NavLink)`
   text-decoration: none;
+
+  &:hover {
+    color: rgb(66, 122, 17);
+  }
   &.active {
     color: var(--primal-color);
   }
-  &:hover {
-    color: #829f19;
-  }
+
   &:active {
-    color: var(--primal-color);
+    color: rgb(73, 150, 6);
   }
 `;
 
@@ -46,12 +49,8 @@ export const ImgLogo = styled.img`
 `;
 export const Header = styled.header`
   position: fixed;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 100%;
-  padding-left: 96px;
-  padding-right: 96px;
+
   z-index: 2;
   background-color: var(--background-color);
 
@@ -72,9 +71,25 @@ export const Nav = styled.nav`
 `;
 
 export const Basket = styled(StyledLink)`
-  margin-bottom: 10px;
   margin-left: -8px;
   position: relative;
+
+  &:hover {
+    svg {
+      fill: rgb(66, 122, 17);
+    }
+  }
+
+  &:active {
+    svg {
+      fill: rgb(73, 150, 6);
+    }
+  }
+  &.active {
+    svg {
+      fill: var(--primal-color);
+    }
+  }
 `;
 
 export const Count = styled.p`
@@ -85,7 +100,31 @@ export const Count = styled.p`
   justify-content: center;
   width: 45px;
   height: 45px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-48%, -40%);
+  top: 5px;
+  left: 1px;
+`;
+export const LoaderStyle = styled.div`
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 100px;
+`;
+
+export const IcoBasket = styled(ReactSVG)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg {
+    width: 45px;
+    height: 45px;
+  }
+`;
+
+export const HeaderContainer = styled(Container)`
+  padding-top: 0;
+  padding-left: 96px;
+  padding-right: 96px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;

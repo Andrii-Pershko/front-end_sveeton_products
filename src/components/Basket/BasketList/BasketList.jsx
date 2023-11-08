@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { selectBasketList } from 'redux/basket/selectors';
 import BasketItem from '../BasketItem';
-import { Table, Td, Th, Tr } from './BasketList.styled';
+import { OrderBtn, Table, Td, Th, Tr } from './BasketList.styled';
 import { useState } from 'react';
 import OrderModal from '../OrderModal';
 
@@ -57,7 +57,7 @@ const BasketList = () => {
           </tr>
         </tbody>
       </Table>
-      <button onClick={toggleModal}>Замовити</button>
+      <OrderBtn onClick={toggleModal}>Замовити</OrderBtn>
       {isOpenOrderModal ? (
         <OrderModal
           toglle={toggleModal}
