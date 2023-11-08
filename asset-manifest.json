@@ -1,15 +1,45 @@
 {
   "files": {
-    "main.css": "/front-end_sveeton_products/static/css/main.e1ca0564.css",
-    "main.js": "/front-end_sveeton_products/static/js/main.3b29810a.js",
+    "main.css": "/front-end_sveeton_products/static/css/main.40f257fa.css",
+    "main.js": "/front-end_sveeton_products/static/js/main.e728a3f3.js",
+    "static/js/932.d4eba414.chunk.js": "/front-end_sveeton_products/static/js/932.d4eba414.chunk.js",
+    "static/css/893.8e923147.chunk.css": "/front-end_sveeton_products/static/css/893.8e923147.chunk.css",
+    "static/js/893.5a96a6e9.chunk.js": "/front-end_sveeton_products/static/js/893.5a96a6e9.chunk.js",
+    "static/js/606.87a01840.chunk.js": "/front-end_sveeton_products/static/js/606.87a01840.chunk.js",
+    "static/js/525.ec26f18b.chunk.js": "/front-end_sveeton_products/static/js/525.ec26f18b.chunk.js",
+    "static/js/402.26aafb6e.chunk.js": "/front-end_sveeton_products/static/js/402.26aafb6e.chunk.js",
+    "static/js/88.9b8a1795.chunk.js": "/front-end_sveeton_products/static/js/88.9b8a1795.chunk.js",
+    "static/js/213.9eaf1f94.chunk.js": "/front-end_sveeton_products/static/js/213.9eaf1f94.chunk.js",
+    "static/js/953.28fe6dbd.chunk.js": "/front-end_sveeton_products/static/js/953.28fe6dbd.chunk.js",
+    "static/js/848.a07da1fc.chunk.js": "/front-end_sveeton_products/static/js/848.a07da1fc.chunk.js",
+    "static/js/705.f0db4abd.chunk.js": "/front-end_sveeton_products/static/js/705.f0db4abd.chunk.js",
+    "static/js/113.de9376e0.chunk.js": "/front-end_sveeton_products/static/js/113.de9376e0.chunk.js",
+    "static/js/709.40133f69.chunk.js": "/front-end_sveeton_products/static/js/709.40133f69.chunk.js",
     "static/media/logo.svg": "/front-end_sveeton_products/static/media/logo.d236e105f98f974caa9dc7a986208390.svg",
+    "static/media/slick.svg": "/front-end_sveeton_products/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/front-end_sveeton_products/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/front-end_sveeton_products/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/front-end_sveeton_products/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/front-end_sveeton_products/index.html",
     "static/media/bag_7156253.svg": "/front-end_sveeton_products/static/media/bag_7156253.0087539f09abb78d73d96c2fea6f9d43.svg",
-    "main.e1ca0564.css.map": "/front-end_sveeton_products/static/css/main.e1ca0564.css.map",
-    "main.3b29810a.js.map": "/front-end_sveeton_products/static/js/main.3b29810a.js.map"
+    "main.40f257fa.css.map": "/front-end_sveeton_products/static/css/main.40f257fa.css.map",
+    "main.e728a3f3.js.map": "/front-end_sveeton_products/static/js/main.e728a3f3.js.map",
+    "932.d4eba414.chunk.js.map": "/front-end_sveeton_products/static/js/932.d4eba414.chunk.js.map",
+    "893.8e923147.chunk.css.map": "/front-end_sveeton_products/static/css/893.8e923147.chunk.css.map",
+    "893.5a96a6e9.chunk.js.map": "/front-end_sveeton_products/static/js/893.5a96a6e9.chunk.js.map",
+    "606.87a01840.chunk.js.map": "/front-end_sveeton_products/static/js/606.87a01840.chunk.js.map",
+    "525.ec26f18b.chunk.js.map": "/front-end_sveeton_products/static/js/525.ec26f18b.chunk.js.map",
+    "402.26aafb6e.chunk.js.map": "/front-end_sveeton_products/static/js/402.26aafb6e.chunk.js.map",
+    "88.9b8a1795.chunk.js.map": "/front-end_sveeton_products/static/js/88.9b8a1795.chunk.js.map",
+    "213.9eaf1f94.chunk.js.map": "/front-end_sveeton_products/static/js/213.9eaf1f94.chunk.js.map",
+    "953.28fe6dbd.chunk.js.map": "/front-end_sveeton_products/static/js/953.28fe6dbd.chunk.js.map",
+    "848.a07da1fc.chunk.js.map": "/front-end_sveeton_products/static/js/848.a07da1fc.chunk.js.map",
+    "705.f0db4abd.chunk.js.map": "/front-end_sveeton_products/static/js/705.f0db4abd.chunk.js.map",
+    "113.de9376e0.chunk.js.map": "/front-end_sveeton_products/static/js/113.de9376e0.chunk.js.map",
+    "709.40133f69.chunk.js.map": "/front-end_sveeton_products/static/js/709.40133f69.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e1ca0564.css",
-    "static/js/main.3b29810a.js"
+    "static/css/main.40f257fa.css",
+    "static/js/main.e728a3f3.js"
   ]
 }

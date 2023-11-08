@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkfront_end_sveeton_products=self.webpackChunkfront_end_sveeton_products||[]).push([[402],{1088:(e,n,s)=>{s.r(n),s.d(n,{default:()=>o});var t=s(184);const o=()=>(0,t.jsx)("h1",{children:"NotFound Page"})}}]);
+//# sourceMappingURL=402.26aafb6e.chunk.js.map
