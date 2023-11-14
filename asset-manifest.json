@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/front-end_sveeton_products/static/css/main.40f257fa.css",
-    "main.js": "/front-end_sveeton_products/static/js/main.4eadd900.js",
+    "main.js": "/front-end_sveeton_products/static/js/main.08b2422f.js",
     "static/js/932.17ac5608.chunk.js": "/front-end_sveeton_products/static/js/932.17ac5608.chunk.js",
     "static/css/893.8e923147.chunk.css": "/front-end_sveeton_products/static/css/893.8e923147.chunk.css",
     "static/js/893.5a96a6e9.chunk.js": "/front-end_sveeton_products/static/js/893.5a96a6e9.chunk.js",
     "static/js/933.e202a3af.chunk.js": "/front-end_sveeton_products/static/js/933.e202a3af.chunk.js",
-    "static/js/525.00eb2243.chunk.js": "/front-end_sveeton_products/static/js/525.00eb2243.chunk.js",
+    "static/js/525.f3800afe.chunk.js": "/front-end_sveeton_products/static/js/525.f3800afe.chunk.js",
     "static/js/88.e22c4fd3.chunk.js": "/front-end_sveeton_products/static/js/88.e22c4fd3.chunk.js",
     "static/js/207.1130e25b.chunk.js": "/front-end_sveeton_products/static/js/207.1130e25b.chunk.js",
     "static/js/213.9eaf1f94.chunk.js": "/front-end_sveeton_products/static/js/213.9eaf1f94.chunk.js",
@@ -23,12 +23,12 @@
     "index.html": "/front-end_sveeton_products/index.html",
     "static/media/bag_7156253.svg": "/front-end_sveeton_products/static/media/bag_7156253.0087539f09abb78d73d96c2fea6f9d43.svg",
     "main.40f257fa.css.map": "/front-end_sveeton_products/static/css/main.40f257fa.css.map",
-    "main.4eadd900.js.map": "/front-end_sveeton_products/static/js/main.4eadd900.js.map",
+    "main.08b2422f.js.map": "/front-end_sveeton_products/static/js/main.08b2422f.js.map",
     "932.17ac5608.chunk.js.map": "/front-end_sveeton_products/static/js/932.17ac5608.chunk.js.map",
     "893.8e923147.chunk.css.map": "/front-end_sveeton_products/static/css/893.8e923147.chunk.css.map",
     "893.5a96a6e9.chunk.js.map": "/front-end_sveeton_products/static/js/893.5a96a6e9.chunk.js.map",
     "933.e202a3af.chunk.js.map": "/front-end_sveeton_products/static/js/933.e202a3af.chunk.js.map",
-    "525.00eb2243.chunk.js.map": "/front-end_sveeton_products/static/js/525.00eb2243.chunk.js.map",
+    "525.f3800afe.chunk.js.map": "/front-end_sveeton_products/static/js/525.f3800afe.chunk.js.map",
     "88.e22c4fd3.chunk.js.map": "/front-end_sveeton_products/static/js/88.e22c4fd3.chunk.js.map",
     "207.1130e25b.chunk.js.map": "/front-end_sveeton_products/static/js/207.1130e25b.chunk.js.map",
     "213.9eaf1f94.chunk.js.map": "/front-end_sveeton_products/static/js/213.9eaf1f94.chunk.js.map",
@@ -40,6 +40,6 @@
   },
   "entrypoints": [
     "static/css/main.40f257fa.css",
-    "static/js/main.4eadd900.js"
+    "static/js/main.08b2422f.js"
   ]
 }
