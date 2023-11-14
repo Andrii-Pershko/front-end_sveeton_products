@@ -73,7 +73,6 @@ export const deleteProduct = createAsyncThunk(
   'deleteProduct',
   async (id, thunkAPI) => {
     try {
-      console.log('Example', id);
       const response = await axios.delete(`/super_admin/${id}`);
 
       return response.data;

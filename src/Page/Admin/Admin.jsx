@@ -11,8 +11,6 @@ const Admin = () => {
   const loadingRefresh = useSelector(selectRefreshLoading);
   const dispatch = useDispatch();
 
-  console.log('Example', loadingRefresh);
-
   useEffect(() => {
     dispatch(refreshAdmin());
   }, [dispatch]);
