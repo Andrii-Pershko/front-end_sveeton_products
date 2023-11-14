@@ -2,12 +2,13 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 axios.defaults.baseURL = 'https://sveeton-products.onrender.com';
+
 const setAuthHeader = token => {
   axios.defaults.headers.common.Authorization = `Bearer ${token}`;
 };
 
 export const addProduct = createAsyncThunk(
-  'autorizationAdmin',
+  'addProduct',
   async (formData, thunkAPI) => {
     try {
       const response = await axios.post(`/super_admin/add_product`, formData);
@@ -21,12 +22,18 @@ export const addProduct = createAsyncThunk(
 );
 
 export const refreshAdmin = createAsyncThunk(
-  'autorizationAdmin',
-  async (formData, thunkAPI) => {
-    try {
-      const response = await axios.post(`/super_admin`, formData);
-      setAuthHeader(response.data.token);
+  'refreshAdmin',
+  async (_, thunkAPI) => {
+    const state = thunkAPI.getState();
+    const persistedToken = state.admin.token;
+    if (persistedToken === null) {
+      console.log('persistedToken', persistedToken);
+      return thunkAPI.rejectWithValue('Unable to fetch user');
+    }
 
+    try {
+      setAuthHeader(persistedToken);
+      const response = await axios.get(`/super_admin`);
       return response.data;
     } catch (e) {
       console.log(e);
@@ -51,7 +58,7 @@ export const autorizationAdmin = createAsyncThunk(
 );
 
 export const updateProduct = createAsyncThunk(
-  'autorizationAdmin',
+  'updateProduct',
   async ({ form, id }, thunkAPI) => {
     try {
       const response = await axios.put(`/super_admin/${id}`, form);
@@ -64,7 +71,7 @@ export const updateProduct = createAsyncThunk(
 );
 
 export const deleteProduct = createAsyncThunk(
-  'autorizationAdmin',
+  'deleteProduct',
   async (id, thunkAPI) => {
     try {
       console.log('Example', id);
