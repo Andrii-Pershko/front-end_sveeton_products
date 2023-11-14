@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { Outlet } from 'react-router-dom';
 import { selectIsAdmin } from 'redux/Admin/selectors';
 
-const Admin = ({ children }) => {
+const Admin = () => {
   const isAdmin = useSelector(selectIsAdmin);
 
   if (!isAdmin) {
@@ -18,7 +18,6 @@ const Admin = ({ children }) => {
 
   return (
     <>
-      <h1>ТИ АДМІН!!</h1>
       <Suspense fallback={<h1>loading</h1>}>
         <Outlet />
       </Suspense>

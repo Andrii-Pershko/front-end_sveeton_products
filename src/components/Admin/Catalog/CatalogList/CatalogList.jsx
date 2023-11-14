@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getProductList } from 'redux/products/operations';
 import { selectProductList } from 'redux/products/selectors';
 import CatalogItems from '../CatalogItems';
+import { ProductList } from 'components/Products/ProductsList/Products.styled';
 
 const CatalogList = () => {
   const dispatch = useDispatch();
@@ -13,13 +14,12 @@ const CatalogList = () => {
   }, [dispatch]);
   return (
     <>
-      <h2>CatalogList</h2>
       {productList.length > 0 ? (
-        <ul>
+        <ProductList>
           {productList.map(product => (
             <CatalogItems key={product._id} product={product} />
           ))}
-        </ul>
+        </ProductList>
       ) : (
         <p>
           Каталог порожній, ви можете додати новий товар нажавши на кнопку вище

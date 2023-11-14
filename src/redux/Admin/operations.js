@@ -20,6 +20,21 @@ export const addProduct = createAsyncThunk(
   }
 );
 
+export const refreshAdmin = createAsyncThunk(
+  'autorizationAdmin',
+  async (formData, thunkAPI) => {
+    try {
+      const response = await axios.post(`/super_admin`, formData);
+      setAuthHeader(response.data.token);
+
+      return response.data;
+    } catch (e) {
+      console.log(e);
+      return thunkAPI.rejectWithValue(e.message);
+    }
+  }
+);
+
 export const autorizationAdmin = createAsyncThunk(
   'autorizationAdmin',
   async (formData, thunkAPI) => {

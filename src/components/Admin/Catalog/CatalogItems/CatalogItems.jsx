@@ -4,6 +4,9 @@ import OverlayModal from 'components/OverlayModal';
 import DeleteModal from '../DeleteModal';
 import useScrollLock from 'hooks/useScrollLock';
 import UpdateModal from '../UpdateModal';
+import { InfThumb } from 'components/Products/ProductItem/ProductItem.styled';
+import { shortDescription } from 'utils/utils';
+import { BtnThumb, CatalogItem } from './CatalogItems.styled';
 
 const CatalogItems = ({ product }) => {
   const [openDeleteModal, setOpenDeleteModal] = useState(false);
@@ -21,16 +24,19 @@ const CatalogItems = ({ product }) => {
 
   const { title, characreristick, price, img } = product;
   return (
-    <li>
-      <p>{title}</p>
+    <CatalogItem>
+      <h2>{shortDescription(title)}</h2>
       <ImgContainer>
         <Img src={img} alt={title}></Img>
       </ImgContainer>
-
-      <p>{characreristick}</p>
-      <p>{price} грн</p>
-      <button onClick={() => togleUpdateModal()}>Редагувати</button>
-      <button onClick={() => togleDeleteModal()}>Видалити товар</button>
+      <InfThumb>
+        <p>{shortDescription(characreristick)}</p>
+        <p>{price} грн</p>
+      </InfThumb>
+      <BtnThumb>
+        <button onClick={() => togleUpdateModal()}>Редагувати</button>
+        <button onClick={() => togleDeleteModal()}>Видалити товар</button>
+      </BtnThumb>
 
       {openDeleteModal ? (
         <OverlayModal togleModal={togleDeleteModal}>
@@ -51,7 +57,7 @@ const CatalogItems = ({ product }) => {
       ) : (
         ''
       )}
-    </li>
+    </CatalogItem>
   );
 };
 export default CatalogItems;

@@ -12,6 +12,7 @@ import {
 } from 'components/Admin/Catalog/CatalogList/CatalogList.styled';
 import ModalProducts from '../ModalProducts';
 import useScrollLock from 'hooks/useScrollLock';
+import { shortDescription } from 'utils/utils';
 
 const ProductItem = ({ product }) => {
   const products = useSelector(selectBasketList).filter(
@@ -33,13 +34,6 @@ const ProductItem = ({ product }) => {
 
     dispath(addProductinBasket(product));
     setInBasket(true);
-  };
-
-  const shortDescription = text => {
-    if (text.length > 25) {
-      return `${text.slice(0, 25)}...`;
-    }
-    return text;
   };
 
   const togleProductModal = e => {

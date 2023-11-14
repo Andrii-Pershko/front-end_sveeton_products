@@ -13,7 +13,7 @@ const fadeInAnimation = keyframes`
 
 export const Container = styled.div`
   position: relative;
-  padding-top: 100px;
+  padding-top: 125px;
   width: 100%;
   min-width: 1280px;
   max-width: 1920px;
