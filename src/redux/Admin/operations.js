@@ -25,14 +25,14 @@ export const refreshAdmin = createAsyncThunk(
   'refreshAdmin',
   async (_, thunkAPI) => {
     const state = thunkAPI.getState();
-    const persistedToken = state.admin.token;
+    const persistedToken = state.token.token;
     if (persistedToken === null) {
-      console.log('persistedToken', persistedToken);
       return thunkAPI.rejectWithValue('Unable to fetch user');
     }
 
     try {
       setAuthHeader(persistedToken);
+      console.log('persistedToken', persistedToken);
       const response = await axios.get(`/super_admin`);
       return response.data;
     } catch (e) {
