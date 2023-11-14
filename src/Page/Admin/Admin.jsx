@@ -1,17 +1,25 @@
 import LoginAdmin from 'components/Admin/LoginAdmin';
+import Loader from 'components/Loader';
 import { Suspense, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Outlet } from 'react-router-dom';
 import { refreshAdmin } from 'redux/Admin/operations';
-import { selectIsAdmin } from 'redux/Admin/selectors';
+import { selectIsAdmin, selectRefreshLoading } from 'redux/Admin/selectors';
 
 const Admin = () => {
   const isAdmin = useSelector(selectIsAdmin);
+  const loadingRefresh = useSelector(selectRefreshLoading);
   const dispatch = useDispatch();
+
+  console.log('Example', loadingRefresh);
 
   useEffect(() => {
     dispatch(refreshAdmin());
   }, [dispatch]);
+
+  if (loadingRefresh) {
+    return <Loader />;
+  }
 
   if (!isAdmin) {
     return (

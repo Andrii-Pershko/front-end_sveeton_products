@@ -32,7 +32,6 @@ export const refreshAdmin = createAsyncThunk(
 
     try {
       setAuthHeader(persistedToken);
-      console.log('persistedToken', persistedToken);
       const response = await axios.get(`/super_admin`);
       return response.data;
     } catch (e) {
