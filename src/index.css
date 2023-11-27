@@ -1,8 +1,6 @@
 @import-normalize;
 /* bring in normalize.css styles */
 
-
-
 @font-face {
   font-family: "Mak-Light";
   src: url("https://db.onlinewebfonts.com/t/533a9d5954c9f7a7b9bb119208251fe4.eot");
@@ -31,7 +29,9 @@
 }
 
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;

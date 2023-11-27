@@ -18,7 +18,7 @@ export const ImgSlider = styled(Img)`
 `;
 
 export const SliderContainer = styled.div`
-  position: absolute;
+  /* position: absolute; */
   top: 100px;
   width: 140vw;
   margin-left: calc(-20% + -96px);

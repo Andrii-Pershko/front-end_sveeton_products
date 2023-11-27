@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { InfThumb, Item } from './ProductItem.styled';
+import { InfThumb, Item, Type } from './ProductItem.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   addProductinBasket,
@@ -37,8 +37,6 @@ const ProductItem = ({ product }) => {
   };
 
   const togleProductModal = e => {
-    console.log('Example', e.target.localName === 'button');
-    console.log('e', e);
     if (e.target.localName !== 'button') {
       setIsOpenProductModal(!isOpenProductModal);
     }
@@ -50,6 +48,7 @@ const ProductItem = ({ product }) => {
         <ImgContainer>
           <Img src={product.img} alt="my product" />
         </ImgContainer>
+        <Type>{product.type}</Type>
         <InfThumb>
           <p>{shortDescription(product.characreristick)}</p>
           <p>{product.price} uah</p>

@@ -18,6 +18,7 @@ import basket from '../../img/ico/baskett/bag_7156253.svg';
 import logo from '../../img/logo.svg';
 import { selectBasketList } from 'redux/basket/selectors';
 import Loader from 'components/Loader';
+import Footer from './Footer';
 
 const Layout = () => {
   const isAdmin = useSelector(selectIsAdmin);
@@ -60,6 +61,7 @@ const Layout = () => {
           <Outlet />
         </Container>
       </Suspense>
+      <Footer />
     </>
   );
 };

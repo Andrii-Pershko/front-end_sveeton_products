@@ -4,7 +4,7 @@ export const Item = styled.li`
   display: flex;
   flex-direction: column;
   width: 350px;
-  height: 600px;
+  height: 620px;
   padding: 20px 0 20px 0;
   position: relative;
   margin-bottom: 40px;
@@ -22,8 +22,7 @@ export const Item = styled.li`
   }
   h2 {
     text-align: center;
-
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   button {
     display: flex;
@@ -44,4 +43,9 @@ export const InfThumb = styled.div`
   padding: 0 10px 0 10px;
   display: flex;
   justify-content: space-between;
+`;
+
+export const Type = styled.p`
+  text-align: center;
+  margin-bottom: 15px;
 `;

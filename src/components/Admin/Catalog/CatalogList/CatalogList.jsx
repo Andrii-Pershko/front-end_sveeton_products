@@ -8,15 +8,16 @@ import { ProductList } from 'components/Products/ProductsList/Products.styled';
 const CatalogList = () => {
   const dispatch = useDispatch();
   const productList = useSelector(selectProductList);
+  const reverseProductList = [...productList].reverse();
 
   useEffect(() => {
     dispatch(getProductList());
   }, [dispatch]);
   return (
     <>
-      {productList.length > 0 ? (
+      {reverseProductList.length > 0 ? (
         <ProductList>
-          {productList.map(product => (
+          {reverseProductList.map(product => (
             <CatalogItems key={product._id} product={product} />
           ))}
         </ProductList>

@@ -1,7 +1,7 @@
 import OverlayModal from 'components/OverlayModal';
 import { ImgThumbFull, ItemFullInf } from './ModalProducts.styled';
 import { Img } from 'components/Admin/Catalog/CatalogList/CatalogList.styled';
-import { InfThumb } from '../ProductItem/ProductItem.styled';
+import { InfThumb, Type } from '../ProductItem/ProductItem.styled';
 
 const ModalProducts = ({ product, toglle, inBasket, setInBasket }) => {
   return (
@@ -11,6 +11,7 @@ const ModalProducts = ({ product, toglle, inBasket, setInBasket }) => {
         <ImgThumbFull>
           <Img src={product.img} alt="my product" />
         </ImgThumbFull>
+        <Type>{product.type}</Type>
         <InfThumb>
           <p>{product.characreristick}</p>
           <p>{product.price} uah</p>

@@ -13,7 +13,7 @@ const fadeInAnimation = keyframes`
 
 export const Container = styled.div`
   position: relative;
-  padding-top: 125px;
+  padding-top: 150px;
   width: 100%;
   min-width: 1280px;
   max-width: 1920px;
@@ -50,6 +50,7 @@ export const ImgLogo = styled.img`
 export const Header = styled.header`
   position: fixed;
   width: 100%;
+  border-bottom: 3px solid #4e5e159d;
 
   z-index: 2;
   background-color: var(--background-color);
