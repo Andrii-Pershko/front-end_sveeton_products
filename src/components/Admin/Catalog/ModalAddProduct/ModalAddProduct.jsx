@@ -95,12 +95,6 @@ const ModalAddProduct = ({ togleModal }) => {
           <AddPhoto>
             <p>{image ? image.name : 'Обрати фото'} </p>
             <StyledFied type="file" name="img" onChange={handleFileChange} />
-            <ErrorMessageStyle
-              id="price"
-              name="price"
-              component="div"
-              className="error"
-            />
           </AddPhoto>
           <LabelStyled>
             <p>Тип продукту</p>

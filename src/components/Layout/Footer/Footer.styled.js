@@ -43,7 +43,4 @@ export const FooterContainer = styled(Container)`
   p {
     margin-bottom: 20px;
   }
-  /* div {
-    margin-bottom: 20px;
-  } */
 `;

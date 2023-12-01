@@ -4,3 +4,11 @@ export const shortDescription = text => {
   }
   return text;
 };
+
+export const waneFilter = (a, b) => {
+  return Number(b.price) - Number(a.price);
+};
+
+export const raiceFilter = (a, b) => {
+  return Number(a.price) - Number(b.price);
+};

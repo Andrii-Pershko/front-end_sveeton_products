@@ -6,14 +6,34 @@ import ProductItem from '../ProductItem';
 import { ProductList } from './Products.styled';
 import Loader from 'components/Loader';
 import FilterBar from '../FilterBar';
+import { raiceFilter, waneFilter } from 'utils/utils';
 
 const Products = () => {
-  const [filter, setFilter] = useState('');
+  const [typeProduct, setTypeProduct] = useState('Всі');
   const dispatch = useDispatch();
+  const isLoading = useSelector(selectIsLoading);
   const productList = useSelector(selectProductList);
   const reverseProductList = [...productList].reverse();
-  const filterProductList = '';
-  const isLoading = useSelector(selectIsLoading);
+  const [sortForPrice, setSortForPrice] = useState(null);
+
+  const filterProductList = reverseProductList.filter(item => {
+    if (typeProduct === 'Всі') {
+      return true;
+    }
+    return item.type === typeProduct;
+  });
+
+  const finalProductList = () => {
+    if (sortForPrice === null) {
+      return filterProductList;
+    }
+    if (!sortForPrice) {
+      return filterProductList.sort(waneFilter);
+    }
+    if (sortForPrice) {
+      return filterProductList.sort(raiceFilter);
+    }
+  };
 
   useEffect(() => {
     dispatch(getProductList());
@@ -24,9 +44,12 @@ const Products = () => {
   }
   return (
     <>
-      <FilterBar />
+      <FilterBar
+        setFilter={{ setTypeProduct, setSortForPrice }}
+        filter={typeProduct}
+      />
       <ProductList>
-        {reverseProductList.map(product => (
+        {finalProductList().map(product => (
           <ProductItem key={product._id} product={product} />
         ))}
       </ProductList>

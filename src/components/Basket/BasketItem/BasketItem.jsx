@@ -6,6 +6,7 @@ import { deleteProductfromBasket } from 'redux/basket/basketSlice';
 import { Math } from './BasketItem.styled';
 
 const BasketItem = ({ product, functional }) => {
+  const dispath = useDispatch();
   const {
     totalPrice,
     totalCount,
@@ -15,9 +16,13 @@ const BasketItem = ({ product, functional }) => {
     setOrderList,
   } = functional;
   const [amount, setAmount] = useState(1);
+  const [totalPriceItem, setTotalPriceItem] = useState(
+    Number(product.price) * amount
+  );
 
   const increment = () => {
     setAmount(amount + 1);
+    setTotalPriceItem(Number(product.price) * amount);
     setTotalPrice(Number(totalPrice) + Number(product.price));
     setTotalCount(totalCount + 1);
     setOrderList(
@@ -45,8 +50,10 @@ const BasketItem = ({ product, functional }) => {
       })
     );
   };
-  const dispath = useDispatch();
+
   const deleteWithBasket = () => {
+    setTotalCount(totalCount - amount);
+    setTotalPrice(totalPrice - totalPriceItem);
     dispath(deleteProductfromBasket(product));
   };
 

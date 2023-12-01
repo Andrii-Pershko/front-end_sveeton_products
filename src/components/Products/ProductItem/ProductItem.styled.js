@@ -43,6 +43,10 @@ export const InfThumb = styled.div`
   padding: 0 10px 0 10px;
   display: flex;
   justify-content: space-between;
+
+  p:last-child {
+    margin-left: 5px;
+  }
 `;
 
 export const Type = styled.p`

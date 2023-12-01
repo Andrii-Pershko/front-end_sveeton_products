@@ -51,7 +51,7 @@ const ProductItem = ({ product }) => {
         <Type>{product.type}</Type>
         <InfThumb>
           <p>{shortDescription(product.characreristick)}</p>
-          <p>{product.price} uah</p>
+          <p>{product.price} грн</p>
         </InfThumb>
 
         <button onClick={handleChangeInBasket}>

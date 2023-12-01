@@ -31,8 +31,6 @@ const UpdateModal = ({ product, togleModal }) => {
       formData.append('img', image);
     }
 
-    console.log('formData', formData);
-
     await dispatch(updateProduct({ id: product._id, form: formData }));
     togleModal();
     await dispatch(getProductList());
