@@ -53,7 +53,7 @@ const BasketItem = ({ product, functional }) => {
 
   const deleteWithBasket = () => {
     setTotalCount(totalCount - amount);
-    setTotalPrice(totalPrice - totalPriceItem);
+    setTotalPrice(totalPrice - totalPriceItem - product.price);
     dispath(deleteProductfromBasket(product));
   };
 
