@@ -1,9 +1,4 @@
-import {
-  Table,
-  Td,
-  Th,
-  Tr,
-} from 'components/Basket/BasketList/BasketList.styled';
+import { Table, Th, Tr } from 'components/Basket/BasketList/BasketList.styled';
 
 const Order = () => {
   return (

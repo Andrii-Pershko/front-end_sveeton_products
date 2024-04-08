@@ -1,4 +1,3 @@
-import { Container } from '../Layout.styled';
 import {
   FooterContainer,
   FooterStyled,
