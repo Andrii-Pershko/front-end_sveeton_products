@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Filter = styled.div`
   position: relative;
   padding: 5px 10px;
-  width: 800px;
+  max-width: 800px;
   display: flex;
   margin-left: auto;
   margin-right: auto;

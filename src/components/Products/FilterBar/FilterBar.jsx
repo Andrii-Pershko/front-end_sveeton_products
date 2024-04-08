@@ -14,6 +14,9 @@ const FilterBar = ({ setFilter, filter }) => {
   const toglleTypeContainer = () => {
     setIsOpenTypeFilter(!isOpenTypeFilter);
   };
+  const closeTypeContainer = () => {
+    setIsOpenTypeFilter(false);
+  };
 
   const handleSelectField = e => {
     setTypeProduct(e.currentTarget.outerText);
@@ -23,6 +26,7 @@ const FilterBar = ({ setFilter, filter }) => {
   const resetFilter = () => {
     setSortForPrice(null);
     setTypeProduct('Всі');
+    closeTypeContainer();
   };
   return (
     <Filter>
@@ -30,10 +34,20 @@ const FilterBar = ({ setFilter, filter }) => {
         <TypeField onClick={toglleTypeContainer}>
           <p>{filter}</p>
         </TypeField>
-        <TypeField onClick={() => setSortForPrice(true)}>
+        <TypeField
+          onClick={() => {
+            setSortForPrice(true);
+            closeTypeContainer();
+          }}
+        >
           <p>За зростанням</p>
         </TypeField>
-        <TypeField onClick={() => setSortForPrice(false)}>
+        <TypeField
+          onClick={() => {
+            setSortForPrice(false);
+            closeTypeContainer();
+          }}
+        >
           <p>За спаданням</p>
         </TypeField>
         <TypeField onClick={resetFilter}>

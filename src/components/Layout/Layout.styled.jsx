@@ -15,11 +15,14 @@ export const Container = styled.div`
   position: relative;
   padding-top: 150px;
   width: 100%;
-  min-width: 1280px;
   max-width: 1920px;
   padding-left: 96px;
   padding-right: 96px;
   margin: 0 auto;
+
+  @media screen and (max-width: 1279px) {
+    width: 100%;
+  }
 `;
 
 export const StyledLink = styled(NavLink)`
