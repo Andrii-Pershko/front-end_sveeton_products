@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/213.9eaf1f94.chunk.js","mappings":"kLAAA,MAIA,EAJeA,KACNC,EAAAA,EAAAA,KAAA,MAAAC,SAAI,e","sources":["Page/Orders/Orders.jsx"],"sourcesContent":["const Orders = () => {\n  return <h1>Orders Page</h1>;\n};\n\nexport default Orders;\n"],"names":["Orders","_jsx","children"],"sourceRoot":""}

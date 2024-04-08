@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkfront_end_sveeton_products=self.webpackChunkfront_end_sveeton_products||[]).push([[213],{2213:(e,s,n)=>{n.r(s),n.d(s,{default:()=>t});var r=n(184);const t=()=>(0,r.jsx)("h1",{children:"Orders Page"})}}]);
-//# sourceMappingURL=213.9eaf1f94.chunk.js.map
