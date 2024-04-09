@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 import { selectBasketList } from 'redux/basket/selectors';
 import BasketItem from '../BasketItem';
 import { OrderBtn, Table, Td, Th, Tr } from './BasketList.styled';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import OrderModal from '../OrderModal';
 
 const BasketList = () => {
@@ -15,10 +15,12 @@ const BasketList = () => {
 
   const [isOpenOrderModal, setIsOpenOrderModal] = useState(false);
   const [totalPrice, setTotalPrice] = useState(() => {
-    let price = 0;
-    basketList.map(product => (price = price + Number(product.price)));
-    return price;
+    return basketList.reduce(
+      (accumulator, product) => accumulator + Number(product.price),
+      0
+    );
   });
+
   const [totalCount, setTotalCount] = useState(basketList.length);
 
   const ref = {
@@ -33,6 +35,14 @@ const BasketList = () => {
   const toggleModal = () => {
     setIsOpenOrderModal(!isOpenOrderModal);
   };
+
+  useEffect(() => {
+    // Використовуємо useEffect для встановлення значень, якщо кошик порожній
+    if (basketList.length === 0) {
+      setTotalPrice(0);
+      setTotalCount(0);
+    }
+  }, [basketList]);
 
   return (
     <>

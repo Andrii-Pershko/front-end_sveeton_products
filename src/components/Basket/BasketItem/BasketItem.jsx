@@ -1,12 +1,12 @@
 import { Img } from 'components/Admin/Catalog/CatalogList/CatalogList.styled';
 import { ImgThumb, Td, Tr } from '../BasketList/BasketList.styled';
-import { useState } from 'react';
+import { useState, useEffect } from 'react'; // Додали useEffect
 import { useDispatch } from 'react-redux';
 import { deleteProductfromBasket } from 'redux/basket/basketSlice';
 import { Math } from './BasketItem.styled';
 
 const BasketItem = ({ product, functional }) => {
-  const dispath = useDispatch();
+  const dispatch = useDispatch();
   const {
     totalPrice,
     totalCount,
@@ -20,11 +20,15 @@ const BasketItem = ({ product, functional }) => {
     Number(product.price) * amount
   );
 
+  useEffect(() => {
+    // Оновлюємо totalPriceItem при зміні кількості
+    setTotalPriceItem(Number(product.price) * amount);
+  }, [amount, product.price]);
+
   const increment = () => {
     setAmount(amount + 1);
-    setTotalPriceItem(Number(product.price) * amount);
-    setTotalPrice(Number(totalPrice) + Number(product.price));
-    setTotalCount(totalCount + 1);
+    setTotalPrice(Number(totalPrice) + Number(product.price)); // Оновлюємо totalPrice
+    setTotalCount(totalCount + 1); // Оновлюємо totalCount
     setOrderList(
       orderList.map(item => {
         if (product._id === item._id) {
@@ -39,8 +43,8 @@ const BasketItem = ({ product, functional }) => {
       return;
     }
     setAmount(amount - 1);
-    setTotalPrice(totalPrice - product.price);
-    setTotalCount(totalCount - 1);
+    setTotalPrice(totalPrice - product.price); // Оновлюємо totalPrice
+    setTotalCount(totalCount - 1); // Оновлюємо totalCount
     setOrderList(
       orderList.map(item => {
         if (product._id === item._id) {
@@ -53,8 +57,8 @@ const BasketItem = ({ product, functional }) => {
 
   const deleteWithBasket = () => {
     setTotalCount(totalCount - amount);
-    setTotalPrice(totalPrice - totalPriceItem - Number(product.price));
-    dispath(deleteProductfromBasket(product));
+    setTotalPrice(totalPrice - totalPriceItem); // Оновлюємо totalPrice
+    dispatch(deleteProductfromBasket(product));
   };
 
   return (
