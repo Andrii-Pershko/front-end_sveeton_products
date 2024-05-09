@@ -1,17 +1,9 @@
 import { NavLink } from 'react-router-dom';
 import { ReactSVG } from 'react-svg';
-import styled, { keyframes } from 'styled-components';
-
-const fadeInAnimation = keyframes`
-    from {
-        padding-left: 620px;
-    }
-    to {
-        padding-left: 0;
-    }
-`;
+import styled from 'styled-components';
 
 export const Container = styled.div`
+  overflow-x: hidden;
   position: relative;
   padding-top: 150px;
   width: 100%;
@@ -41,7 +33,6 @@ export const StyledLink = styled(NavLink)`
 `;
 
 export const LogoNavLink = styled(StyledLink)`
-  animation: ${fadeInAnimation} 1s ease;
   overflow: hidden;
 `;
 
@@ -125,9 +116,7 @@ export const IcoBasket = styled(ReactSVG)`
 `;
 
 export const HeaderContainer = styled(Container)`
-  padding-top: 0;
-  padding-left: 96px;
-  padding-right: 96px;
+  padding: 0 calc(96px + (20px - (100vw - 100%))) 0 96px;
   display: flex;
   justify-content: space-between;
   align-items: center;
